@@ -19,7 +19,7 @@ const int channel = 1;
 
 void setup() {
     for (int i = 0; i < numDigPinsCC; i++) {
-    pinMode(digitalpincc[i], INPUT_PULLUP);
+    pinMode(digitalpincc[i], INPUT);
 }
  
 
