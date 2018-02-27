@@ -20,6 +20,7 @@ const int channel = 1;
 void setup() {
     for (int i = 0; i < numDigPinsCC; i++) {
     pinMode(digitalpincc[i], INPUT);
+    digitalWrite(digitalpincc[i],HIGH);
 }
  
 
