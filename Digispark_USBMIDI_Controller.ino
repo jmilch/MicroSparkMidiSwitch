@@ -55,20 +55,20 @@ void loop() {
   debouncer5.update();
 
   // Get the updated value :
-  int value[0] = debouncer0.read();
-  int value[1] = debouncer1.read();
-  int value[2] = debouncer2.read();
-  int value[3] = debouncer5.read();
+  value[0] = debouncer0.read();
+  value[1] = debouncer1.read();
+  value[2] = debouncer2.read();
+  value[3] = debouncer5.read();
    
    
    // digital pins sending CC
 
   for (int i = 0; i < numDigPinsCC; i++) {
-    if (value[i]) == 1 && currentDigcc[i] == 0) {
+    if (value[i] == 1 && currentDigcc[i] == 0) {
       midi.sendControlChange(i+50, 127, channel); 
       currentDigcc[i] = 1;
     }  
-    if (value[i]) == 0  && currentDigcc[i] == 1) {
+    if (value[i] == 0  && currentDigcc[i] == 1) {
       midi.sendControlChange(i+50, 0, channel);
       currentDigcc[i] = 0;
     }  
